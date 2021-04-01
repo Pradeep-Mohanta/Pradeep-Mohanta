@@ -1,0 +1,24 @@
+• src
++---• app
+|   +---• user
+|   |   |--- user.component.ts|.html|.css
+|   |   +---• registration
+|   |   |   |--- registration.component.ts|.html|.css
+|   |   +---• Login
+|   |   |   |--- login.component.ts|.html|.css
+|   +---• Home
+|   |   |--- home.component.ts|.html|.css
+|   |   |
+|   +---• Auth
+|   |   |--- auth.gaurd.ts
+|   |   |--- auth.interceptor.ts
+|   |   |
+|   +---• shared
+|   |   |--- user.service.ts
+|   |
+|   |--- app.module.ts
+|   |--- app-routing.module.ts (route cofiguration)
+|
+|--- index.html (cdn path for bootstrap)
+
+Alt+0149
