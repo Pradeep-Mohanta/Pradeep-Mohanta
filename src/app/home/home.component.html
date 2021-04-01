@@ -1,0 +1,113 @@
+<!-- <style>
+    .navbar-collapse {
+    position: absolute;
+    top: 60px;
+    left: -7%;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 8px;
+    width: 100%;
+    transition: all 0.120s ease;
+    display: block;
+    }
+    .navbar-collapse.collapsing {
+    height: auto !important;
+    transition: all 0.2s ease;
+}
+.navbar-collapse.show {
+    left:0;
+}
+.group a:hover { background-color: #73AD21; border-radius: 50px;}
+.active a { background-color: #faecad; }
+</style> -->
+<div>
+    <nav class="navbar bg-secondary">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="/home">
+                <img src="/assets/img/logobss.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+                 Welcome ERP System
+              </a>
+            <div class="text-white text-capitalize align-text-top" *ngIf="userDetails"> Welcome : {{userDetails.fullName}} </div>
+            <button class="btn btn-info my-2 my-sm-0 me-4" (click)="onLogout()">Log Out</button>
+        </div>
+    </nav>
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+        <div class="ms-auto" >
+            <div class="text-center p-1">
+                <ul class="navbar-nav text-right group">
+                    <li class="nav-item" >
+                        <a class="nav-link active" href="/home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About us</a>
+                        
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarFinance" data-toggle="dropdown" area-expanded="false">Finance</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarFinance">
+                            <li><a class="dropdown-item" href="#"><strong>Masters</strong></a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Account Master</a></li>
+                            <li><a class="dropdown-item" href="#">Book Master</a></li>
+                            <li><a class="dropdown-item" href="#">Ledger Master</a></li>
+                            <li><a class="dropdown-item" href="#">Sub-Ledger Master</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                          </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarPayroll" data-toggle="dropdown" area-expanded="false">Payroll</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarPayroll">
+                            <li><a class="dropdown-item" href="#"><strong>Masters</strong></a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" routerLink='/payroll/designation'>Designation Master</a></li>
+                            <li><a class="dropdown-item" routerLink='/payroll/department'>Department Master</a></li>
+                            <li><a class="dropdown-item" routerLink='/payroll/employee'>Employee Master</a></li>
+                            <li><a class="dropdown-item" href="#">Payroll Settings</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#"><strong>Transaction</strong></a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Salary Generation</a></li>
+                            <li><a class="dropdown-item" href="#">Salary Payment</a></li>
+                            <li><a class="dropdown-item" href="#">Salary Delete</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#"><strong>Reports</strong></a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Salary Register</a></li>
+                            <li><a class="dropdown-item" href="#">Salary Slip</a></li>
+                          </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Human Resource</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sales</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Deposit</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">System Setup</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>  
+
+
+<!-- <div class="warpper">
+<div class="row" >
+    <div class="col-md-10 offset-md-1">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+</div> -->
+
+    <div style="margin-top: 100px;">
+        <router-outlet></router-outlet>
+    </div>
+ 
