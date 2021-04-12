@@ -10,23 +10,23 @@ import { UserService } from '../shared/user.service';
 })
 export class HomeComponent implements OnInit {
   
-  userDetails;
+  
   
   constructor(private router:Router,private service:UserService) { }
   
   ngOnInit(): void {
-    this.service.getUserProfile().subscribe(
-      res=>{
-        this.userDetails=res;
-      },
-      err=>{
-        console.log(err);
-      }
-    );
+    // this.service.getUserProfile().subscribe(
+    //   res=>{
+    //     this.userDetails=res;
+    //   },
+    //   err=>{
+    //     console.log(err);
+    //   }
+    // );
   }
 
-  onLogout(){
-    localStorage.removeItem('token');
-    this.router.navigate(['/user/login']);
-  }
+  // onLogout(){
+  //   localStorage.removeItem('token');
+  //   this.router.navigate(['/user/login']);
+  // }
 }

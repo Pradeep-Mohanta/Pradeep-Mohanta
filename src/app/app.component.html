@@ -1,2 +1,15 @@
 
+<div class="container">
+<nav class="navbar bg-secondary">
+    <div class="container-fluid">
+        <a class="navbar-brand text-white" href="/home">
+            <img src="/assets/img/logobss.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+             Welcome ERP System
+          </a>
+          <input [(ngModel)]='fname' type="hidden">
+        <div class="text-white text-capitalize align-text-top" *ngIf="userDetails"> Welcome : {{fname}} </div>
+        <button class="btn btn-info my-2 my-sm-0 me-4" *ngIf="tokenLength" (click)="onLogout()">Log Out</button>
+    </div>
+</nav>
 <router-outlet></router-outlet>
+</div>

@@ -8,20 +8,33 @@ import { AuthGuard } from './auth/auth.guard';
 import { DesignationComponent } from './payroll/designation/designation.component';
 import { DepartmentComponent } from './payroll/department/department.component';
 import { EmployeeComponent } from './payroll/employee/employee.component';
-const routes: Routes = [
-  {path: '',redirectTo:'/user/login',pathMatch:'full'},
-  {path: 'user',component: UserComponent,
-    children: [
-      {path: 'registration',component:RegistrationComponent},
-      {path: 'login',component:LoginComponent}
-      ]
-  },
-  {path:'home',component:HomeComponent,canActivate:[AuthGuard]},
+// const routes: Routes = [
+//   {path: '',redirectTo:'/user/login',pathMatch:'full'},
+//   {path: 'user',component: UserComponent,
+//     children: [
+//       {path: 'registration',component:RegistrationComponent},
+//       {path: 'login',component:LoginComponent}
+//       ]
+//   },
+//   {path:'home',component:HomeComponent,canActivate:[AuthGuard]},
+//   {path: 'payroll/designation',component:DesignationComponent},
+//   {path: 'payroll/department',component:DepartmentComponent},
+//   {path: 'payroll/employee',component:EmployeeComponent}
+// ];
+const routes: Routes=[
+
+  {path: '',redirectTo:'home',pathMatch:'full'},
+  {path: 'home',component:HomeComponent,canActivate:[AuthGuard]},
+  {path: 'user',component:UserComponent,
+        children: [
+          {path: 'registration',component:RegistrationComponent},
+          {path: 'login',component:LoginComponent}
+        ]
+      },
   {path: 'payroll/designation',component:DesignationComponent},
   {path: 'payroll/department',component:DepartmentComponent},
   {path: 'payroll/employee',component:EmployeeComponent}
 ];
-
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
